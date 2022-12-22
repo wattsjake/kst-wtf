@@ -4,6 +4,8 @@
 #include <time.h>
 #include <math.h>
 
+#define SIZE 40
+
 int main(int argc, char *argv[])
 {
     if(argc < 3)
@@ -15,11 +17,19 @@ int main(int argc, char *argv[])
     }
 
     char *output_filename = argv[1];
+
+    char file_location[SIZE] = "output_file/";
+
     int points = atoi(argv[2]);
 
-    printf("Points: %i\n", points);
-    //print output file name
+    //concatenate file location and output file name
+    strcat(file_location, output_filename);
+
     printf("Output file: %s\n", output_filename);
+
+    printf("file_location: %s\n", file_location);
+
+    printf("Points: %i\n", points);
 
     //create output file data
     struct array t;
@@ -40,7 +50,7 @@ int main(int argc, char *argv[])
 
     for(int i = 0; i<t.len; i++)
     {
-        FILE * fp = fopen(argv[1], "a");
+        FILE * fp = fopen(file_location, "a");
         fprintf(fp, "%f, %f\n", t.data[i], y.data[i]);
         fclose(fp);
     }
