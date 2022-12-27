@@ -55,6 +55,9 @@ int main(int argc, char *argv[])
         fclose(fp);
     }
 
+    random_array(&y, 0, 100);
+    print_array(y);
+
     //free memory
     free(t.data);
     free(y.data);

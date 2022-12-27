@@ -39,3 +39,4 @@ shift $((OPTIND-1))
 #(cd build;make install)
 #echo "[*] Python Testing"
 #(cd python;python3 ece3210_lab07.py)
+#usage - ./testbuild.sh -cm

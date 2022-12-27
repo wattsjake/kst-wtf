@@ -53,4 +53,12 @@ void sine(array *t, array *y)
     }
 }
 
+void random_array(array *X, double low, double high)
+{
+    for(int i = 0; i < X->len; i++)
+    {
+        X->data[i] =  (double)rand() * (high - low)/ (double)RAND_MAX + low;
+    }
+}
+
 

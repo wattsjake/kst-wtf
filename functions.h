@@ -20,4 +20,6 @@ void linspace(double start, double end, int n, array *X);
 
 void sine(array *t, array *y);
 
+void random_array(array *X, double low, double high);
+
 #endif
