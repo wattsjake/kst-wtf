@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     temp.data = malloc(temp.len * sizeof(double));
     zeros_array(&temp);
 
-    linspace(0, 100*M_PI, points, &t);
+    linspace(0, 10*M_PI, points, &t);
     // print_array(t);
 
     sine(&t, &y);
