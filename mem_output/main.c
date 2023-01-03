@@ -16,6 +16,9 @@ int main(int argc, char *argv[])
    }
 
    int time = atoi(argv[1]);
+   printf("Time: %i\n", time);
+
+   //Memory usage test for program
 
    struct rusage r_usage;
    int *p = 0;
@@ -28,5 +31,6 @@ int main(int argc, char *argv[])
          printf("Error in getrusage. errno = %d\n", errno);
       usleep(time);
    }
+
    return 0;
 }

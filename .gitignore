@@ -53,3 +53,5 @@ dkms.conf
 wtf
 output_file
 .vscode/settings.json
+mem_output/mem
+batt/batt
